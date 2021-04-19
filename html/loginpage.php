@@ -18,7 +18,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-    <form method="POST" action="php/login.php">
+    <form method="POST" action="../php/login.php">
         <div class="d-flex justify-content-center mt-5" >
         <div >
         <div >
@@ -34,7 +34,7 @@
              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
           </div>
           <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary mt-3 ">Submit</button>
+              <button type="submit" class="btn btn-primary mt-3 " name ="submitbtn">Submit</button>
           </div>
           <div class="d-flex justify-content-center mt-3"><a href="html/forgotpassword.html">Forgot Password?</a></div>
           
