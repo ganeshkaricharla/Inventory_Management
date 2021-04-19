@@ -1,43 +1,3 @@
-<?php
-$username = filter_input(INPUT_POST, 'Email');
-$password = filter_input(INPUT_POST, 'Password');
-if (!empty($username)){
-if (!empty($password)){
-$host = "localhost";
-$dbusername = "root";
-$dbpassword = "1234";
-$dbname = "login_db";
-// Create connection
-$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
-if (mysqli_connect_error()){
-die('Connect Error ('. mysqli_connect_errno() .') '
-. mysqli_connect_error());
-}
-else{
-$sql = "INSERT INTO login_db (username, password)
-values ('$username','$password')";
-if ($conn->query($sql)){
-echo "New record is inserted sucessfully";
-}
-else{
-echo "Error: ". $sql ."
-". $conn->error;
-}
-$conn->close();
-}
-}
-else{
-echo "Password should not be empty";
-die();
-}
-}
-else{
-echo "Username should not be empty";
-die();
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
@@ -58,7 +18,7 @@ die();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-    <form method="POST" action="#">
+    <form method="POST" action="login_verify.php">
         <div class="d-flex justify-content-center mt-5" >
         <div >
         <div >
