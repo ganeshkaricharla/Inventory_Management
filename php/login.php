@@ -23,12 +23,8 @@
                     $result = $conn->query($sql);
                     if ( mysqli_num_rows($result)  > 0)
                     {
-<<<<<<< HEAD
-                        echo "Hello $username" ;
-=======
                         $data = $result->fetch_row();
                         echo "Hello ".$data[2]." frands";
->>>>>>> 0b35784600c1dc3af0d57c3141fc6adcb5519778
                     }
                     else
                     {
