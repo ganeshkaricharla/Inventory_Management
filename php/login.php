@@ -21,7 +21,7 @@
                 {
                     $sql =  " SELECT email,password,name from logindb where email = '$username' and password ='$password' ";
                     $result = $conn->query($sql);
-                    if ($result)
+                    if ( mysqli_num_rows($result)  > 0)
                     {
 <<<<<<< HEAD
                         echo "Hello $username" ;
@@ -32,7 +32,7 @@
                     }
                     else
                     {
-                        echo "Error: ". $sql ." ". $conn->error;
+                        echo "Wrong User Name or Password";
                     }
                     $conn->close();
                 }
