@@ -22,7 +22,7 @@
                     $sql =  " SELECT email,password from logindb where email = '$username' and password ='$password' ";
                     if ($conn->query($sql))
                     {
-                        echo "Hello";
+                        echo "Hello $username" ;
                     }
                     else
                     {
