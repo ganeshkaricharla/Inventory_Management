@@ -15,6 +15,7 @@ session_start();
             {
                 $data = $result->fetch_row();
                 $_SESSION['User'] = $data[2];
+                $_SESSION['Email'] = $data[0];
                 header("location:../html/homepage.php");
             }
             else

@@ -34,23 +34,23 @@
   
      <form method="POST" action="../php/register.php"  >
   <div class=" d-flex justify-content-center col-9 mt-5">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email" >
+    <label for="Email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" name="Email" >
   </div>
   <div class="d-flex justify-content-center mt-5 col-9">
-  <div class="mr-5"><label for="exampleInputPassword1" class="form-label">Name</label></div>
+  <div class="mr-5"><label for="Name" class="form-label">Name</label></div>
     <input type="text" class="form-control" name="Name">
   </div>
   <div class="mb-3 d-flex justify-content-center mt-5  mr-4 col-9">
-  <div class="mr-5"> <label  class="form-label">Color</label></div>
+  <div class="mr-5"> <label  for="Color" class="form-label">Color</label></div>
     <input type="text" class="form-control" name="Color">
   </div>
   <div class="mb-3 d-flex justify-content-center mt-5 mr-2 col-9">
-  <div class="mr-5"> <label for="exampleInputPassword1" class="form-label">Password</label></div>
+  <div class="mr-5"> <label for="Password" class="form-label">Password</label></div>
     <input type="password" class="form-control" name="Password">
   </div> 
   <div class="d-flex justify-content-center mt-5">
-  <button type="submit" class="btn btn-primary" name="button1">Submit</button>
+  <button type="submit" class="btn btn-primary" name="registerbtn">Submit</button>
   </div>
 </form>
   

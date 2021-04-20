@@ -58,8 +58,8 @@
           <div class="d-flex justify-content-center">
               <button type="submit" class="btn btn-primary mt-3 " name ="submitbtn">Submit</button>
           </div>
-          <div class="d-flex justify-content-center mt-3"><a href="html/forgotpassword.html">Forgot Password?</a></div>
-          <div class="d-flex justify-content-center mt-3"><a href="html/register.php">Don't Have an Account? Register Now</a></div>
+          <div class="d-flex justify-content-center mt-3"><a href="forgotpassword.php">Forgot Password?</a></div>
+          <div class="d-flex justify-content-center mt-3"><a href="registerpage.php">Don't Have an Account? Register Now</a></div>
         </div>
     </div>
       </form>

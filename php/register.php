@@ -5,7 +5,7 @@ $password=$_POST['Password'];
 $color=$_POST['Color'];
 require_once('connection.php');
 session_start();
-if(isset($_POST['button1']))
+if(isset($_POST['registerbtn']))
 {
     
     if(empty($_POST['Email']) || empty($_POST['Password']) || empty($_POST['Name']) || empty($_POST['Color']) )
@@ -31,8 +31,7 @@ if(isset($_POST['button1']))
                 echo "You are Registered Successfully.Please login with your details from login page";
                 }
                 else{
-                echo "Error: ". $sql ."
-                ". $conn->error;
+                echo "Error: ". $sql ." ". $conn->error;
                 }
         }
     }
