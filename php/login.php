@@ -1,48 +1,30 @@
 <?php
-    $username = filter_input(INPUT_POST, 'Email');
-    $password = filter_input(INPUT_POST, 'Password');
-    if(isset($_POST['submitbtn']) == true)
+require_once('connection.php');
+session_start();
+    if(isset($_POST['submitbtn']))
     {
-        if (!empty($username))
+        if(empty($_POST['Email']) || empty($_POST['Password']))
         {
-            if (!empty($password))
-            {
-                $host = "localhost";
-                $dbusername = "root";
-                $dbpassword = "1234";
-                $dbname = "invmgmtsc";
-                // Create connection
-                $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
-                if (mysqli_connect_error())
-                {
-                    die('Connect Error ('. mysqli_connect_errno() .') '. mysqli_connect_error());
-                }
-                else
-                {
-                    $sql =  " SELECT email,password,name from logindb where email = '$username' and password ='$password' ";
-                    $result = $conn->query($sql);
-                    if ( mysqli_num_rows($result)  > 0)
-                    {
-                        $data = $result->fetch_row();
-                        echo "Hello ".$data[2]." frands";
-                    }
-                    else
-                    {
-                        echo "Wrong User Name or Password";
-                    }
-                    $conn->close();
-                }
-            }
-            else
-            {
-                echo "Password should not be empty";
-                die();
-            }
+            header("location:../html/loginpage.php?Empty= Please Fill all the fields.");
         }
         else
         {
-            echo "Username should not be empty";
-            die();
+            $query="select email,password,name from logindb where email='".$_POST['Email']."' and password ='".$_POST['Password']."'";
+            $result =  mysqli_query($con,$query);
+            if(mysqli_num_rows($result) == 1)
+            {
+                $data = $result->fetch_row();
+                $_SESSION['User'] = $data[2];
+                header("location:../html/homepage.php");
+            }
+            else
+            {
+                header("location:../html/loginpage.php?Invalid= Enter Correct Details");
+            }
         }
+    }
+    else
+    {
+        echo "Error Please Refresh and Login with Your Credientials";
     }
 ?>
