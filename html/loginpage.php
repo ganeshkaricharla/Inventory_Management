@@ -18,26 +18,48 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
+
+    <?php
+          if(@$_GET['Empty']==true)
+          {
+    ?>
+          <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+            <?php echo "You should Fill the blanks First." ?>
+          </div>
+    <?php
+          }      
+    ?>
+
+    <?php
+          if(@$_GET['Invalid']==true)
+          {
+      ?>
+          <div class="alert alert-danger alert-dismissible fade show text-center"  role="alert">
+            <?php echo "Check Your Details." ?>
+          </div>
+      <?php
+          }      
+    ?>
     <form method="POST" action="../php/login.php">
         <div class="d-flex justify-content-center mt-5" >
         <div >
         <div >
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email">
+          <label for="Email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" name="Email">
           <div id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</div>
         </div>
         <div class="mt-5">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="Password">
+          <label for="Password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="Password" name="Password">
         </div>
-        <div id="passwordHelpBlock" class="form-text justify-content ml-3 text-muted">
+        <div id="passwordHelp" class="form-text justify-content ml-3 text-muted">
              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
           </div>
           <div class="d-flex justify-content-center">
               <button type="submit" class="btn btn-primary mt-3 " name ="submitbtn">Submit</button>
           </div>
           <div class="d-flex justify-content-center mt-3"><a href="html/forgotpassword.html">Forgot Password?</a></div>
-          
+          <div class="d-flex justify-content-center mt-3"><a href="html/register.php">Don't Have an Account? Register Now</a></div>
         </div>
     </div>
       </form>
