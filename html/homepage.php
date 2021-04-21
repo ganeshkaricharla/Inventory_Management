@@ -32,18 +32,6 @@ session_start();
         </div>
     </nav>
 
-    <?php
-       /* <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">EmptyFields</strong>
-                <small>Error Messgae</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                Hello, world! This is a toast message.
-            </div>
-        </div>*/
-    ?>
 
 
 
@@ -64,7 +52,57 @@ session_start();
             
             <!--Function's Butt Response-->
             <div class="col-8 border bg-dark">
+                <?php
+                if(@$_GET['Empty']==true)
+                {
+                    ?>
+                        <div class="alert alert-danger text-center container-sm"  role="alert">
+                            <?php echo "No Empty Fields." ?>
+                        </div>
+                <?php
+                        }      
+                ?>
+                <?php
+                if(@$_GET['Invalid']==true)
+                {
+                    ?>
+                        <div class="alert alert-danger text-center container-sm"  role="alert">
+                            <?php echo "Data Invalid,Please Check" ?>
+                        </div>
+                <?php
+                        }      
+                ?>
+                <?php
+                if(@$_GET['Exists']==true)
+                {
+                    ?>
+                        <div class="alert alert-danger text-center container-sm"  role="alert">
+                            <?php echo "Item Already Exists You can Update Values." ?>
+                        </div>
+                <?php
+                        }      
+                ?>
 
+                <?php
+                if(@$_GET['Inserted']==true)
+                {
+                    ?>
+                        <div class="alert alert-success text-center container-sm"  role="alert">
+                            <?php echo "Item Inserted Succesfully." ?>
+                        </div>
+                <?php
+                        }      
+                ?>
+                <?php
+                if(@$_GET['NotInserted']==true)
+                {
+                    ?>
+                        <div class="alert alert-warning text-center container-sm"  role="alert">
+                            <?php echo "Item Not Inserted,Try after Sometime." ?>
+                        </div>
+                <?php
+                        }      
+                ?>
             <!-- if add button pressed --> 
             <?php
                 if(@$_GET['Add']==true)
@@ -89,7 +127,7 @@ session_start();
                         </div>
                     </div>
                     
-                    <button type="submit" class="btn btn-warning col-5 offset-4 center">Add Item</button>
+                    <button type="submit" class="btn btn-warning col-5 offset-4 center" name="additembtn">Add Item</button>
                 </form>
             <?php
                 }      
@@ -110,7 +148,7 @@ session_start();
 
                     <div class="row m-4">
                         <div class="col">
-                            <select class="form-select col" aria-label="Default select example">
+                            <select class="form-select col" aria-label="Default select example" name="itemname">
                                 <?php
                                     require_once('../php/connection.php');
                                     $query="select itemname from inventorydb where email = '".$_SESSION['Email']."'";
