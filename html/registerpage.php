@@ -38,25 +38,21 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   
   
-     <form method="POST" action="../php/register.php"  >
-  <div class=" d-flex justify-content-center col-9 mt-5">
-    <label for="Email" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" name="Email" >
+     <form method="POST" action="../php/register.php"  class="container-fluid m-5">
+  <div class=" d-flex justify-content-center col-6 offset-3 mt-5">
+    <input type="email" class="form-control" id="Email" placeholder="Email" name="Email" >
   </div>
-  <div class="d-flex justify-content-center mt-5 col-9">
-  <div class="mr-5"><label for="Name" class="form-label">Name</label></div>
-    <input type="text" class="form-control" name="Name">
+  <div class="d-flex justify-content-center mt-5 col-6 offset-3">
+    <input type="text" class="form-control" placeholder="Name" name="Name">
   </div>
-  <div class="mb-3 d-flex justify-content-center mt-5  mr-4 col-9">
-  <div class="mr-5"> <label  for="Color" class="form-label">Color</label></div>
-    <input type="text" class="form-control" name="Color">
+  <div class="mb-3 d-flex justify-content-center mt-5  mr-4 col-6 offset-3">
+    <input type="text" class="form-control" name="Color" placeholder="Color">
   </div>
-  <div class="mb-3 d-flex justify-content-center mt-5 mr-2 col-9">
-  <div class="mr-5"> <label for="Password" class="form-label">Password</label></div>
-    <input type="password" class="form-control" name="Password">
+  <div class="mb-3 d-flex justify-content-center mt-5 mr-2 col-6 offset-3">
+    <input type="password" class="form-control" placeholder ="password" name="Password">
   </div> 
   <div class="d-flex justify-content-center mt-5">
-  <button type="submit" class="btn btn-primary" name="registerbtn">Submit</button>
+    <button type="submit" class="btn btn-primary" name="registerbtn">Submit</button>
   </div>
 </form>
   
