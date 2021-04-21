@@ -167,7 +167,7 @@ session_start();
 
                     <div class="row m-4">
                         <div class="col">
-                            <button type="submit" class="btn btn-warning col center">Delete Item</button>
+                            <button type="submit" class="btn btn-warning col center" name="deleteitembtn">Delete Item</button>
                         </div>
                     </div>
                     
