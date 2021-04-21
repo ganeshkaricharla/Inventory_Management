@@ -29,13 +29,14 @@ Inventory Management System</h2>
     </nav>
     <div class="pt-5 bg-secondary text-light"> 
     <h4><p class="fw-bold offset-4">What is an inventory management system?</p></h4><br><br>
-An inventory management system (or inventory system) is the process by which you track your goods throughout your entire supply chain, from purchasing to production to end sales. It governs how you approach inventory management for your business.<br>
+<div class="mx-5">An inventory management system (or inventory system) is the process by which you track your goods throughout your entire supply chain, from purchasing to production to end sales. It governs how you approach inventory management for your business.<br>
+</div>
 <br>
-<h4><p class="fw-bold offset-5">Why do we need it?</p></h4><br>
-Any venture that handles stock will need a system to accurately track and control it. Without one, you’ll be working on an entirely ad-hoc basis — and you’ll quickly run into situations where your business is overstocked or understocked.<br>
+<h4><p class="fw-bold offset-5 ">Why do we need it?</p></h4><br>
+<div class="mx-5">Any venture that handles stock will need a system to accurately track and control it. Without one, you’ll be working on an entirely ad-hoc basis — and you’ll quickly run into situations where your business is overstocked or understocked.<br>
 Inventory systems tell you the number of components or ingredients you need to create or assemble your final product. Without this information you may end up with excess stock, eroding your bottom line, or with insufficient stock to meet customer demand.<br>
 But while you will need an inventory management system, which one you choose is entirely up to you. There are countless different systems you can adopt, ranging from simple approaches to comprehensive solutions.
-
+</div>
 </div>
 <div>
 <div class="card mt-5 ml-3" style="width: 18rem;">
