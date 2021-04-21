@@ -37,17 +37,43 @@ Inventory systems tell you the number of components or ingredients you need to c
 But while you will need an inventory management system, which one you choose is entirely up to you. There are countless different systems you can adopt, ranging from simple approaches to comprehensive solutions.
 
 </div>
-<div>
-<div class="card mt-5 ml-3" style="width: 18rem;">
-  <img src="/assets/images/mypic2.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">K.Vighnesh</h5>
-    <p class="card-text">Developer | Ethical Hacking Enthusiast | Designer | Keen Learner
-East Godavari, Andhra Pradesh, India</p>
-    <a href="https://www.linkedin.com/in/vighnesh-kanakala-4ab816190/" class="btn btn-primary">Linkedin</a>
-    <a href="https://github.com/vighnesh777" class="btn btn-primary">Github</a>
+<div class="row">
+<div class ="col">
+  <div class="card mt-5 ml-3" style="width: 18rem;">
+    <img src="assets/images/vighnesh.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">K.Vighnesh</h5>
+      <p class="card-text">Developer | Ethical Hacking Enthusiast | Designer | Keen Learner</p>
+      <a href="https://www.linkedin.com/in/vighnesh-kanakala-4ab816190/" class="btn btn-primary">Linkedin</a>
+      <a href="https://github.com/vighnesh777" class="btn btn-primary">Github</a>
+    </div>
   </div>
 </div>
+
+<div class ="col">
+  <div class="card mt-5 ml-3" style="width: 18rem;">
+    <img src="assets/images/ganesh.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Karicharla GNV Swamy Naidu</h5>
+      <p class="card-text">Developer | Analyst | Designer | Learner</p>
+      <a href="https://www.linkedin.com/in/ganeshkaricharla/" class="btn btn-primary">Linkedin</a>
+      <a href="https://github.com/ganeshkaricharla" class="btn btn-primary">Github</a>
+    </div>
+  </div>
+</div>
+
+<div class ="col">
+  <div class="card mt-5 ml-3" style="width: 18rem;">
+    <img src="assets/images/harsha.jpg" class="card-img-top" alt="..." width="200">
+    <div class="card-body">
+      <h5 class="card-title">Potula HarshaVardhan</h5>
+      <p class="card-text">Developer | Analyst | Learner</p>
+      <a href="https://www.linkedin.com/in/harshavardhanpotula/" class="btn btn-primary">Linkedin</a>
+      <a href="https://github.com/harshapotula" class="btn btn-primary">Github</a>
+    </div>
+  </div>
+</div>
+
 </div>
   </body>
 </html>

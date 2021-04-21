@@ -14,6 +14,7 @@
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Register</a>
+      <a class="btn btn-primary" href="../index.php" role="button">Homepage</a>
     </div>
   </nav>
   <?php

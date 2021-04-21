@@ -14,6 +14,7 @@
   <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Forgot Password</a>
+    <a class="btn btn-primary" href="../index.php" role="button">Homepage</a>
   </div>
 </nav>
   <?php
@@ -46,11 +47,11 @@
       ?>
 
       <form method="POST" action="../php/forgot.php">
-            <div class="d-flex justify-content-center ml-5 my-5">
+            <div class="d-flex justify-content-center my-5">
                   <div class="row">
-                        <div class="col-9">
+                        <div class="col-12">
                               <p>
-                                    Please enter your email address below and we will display your password if the color you chose is right.
+                                    <strong>Please enter your email address and color below and we will display your password.</strong>
                               </p>
                               <label for="Email" class="form-label">Email Address</label> <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" name="Email"><br>
                               <div class="mt-4">

@@ -27,9 +27,10 @@ if(isset($_POST['registerbtn']))
             $sql = "INSERT INTO logindb (email,name,password,color) values ('$email','$name','$password','$color')";
             $result3= mysqli_query($con,$sql);
             $result4=mysqli_query($con,$compare);
-            if (mysqli_num_rows($result2) < mysqli_num_rows($result4)){
-                echo "You are Registered Successfully.Please login with your details from login page";
-                }
+            if (mysqli_num_rows($result2) < mysqli_num_rows($result4))
+            {
+                header("connection:../html/loginpage.php")    
+            }
                 else{
                 echo "Error: ". $sql ." ". $conn->error;
                 }
