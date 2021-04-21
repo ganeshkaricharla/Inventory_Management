@@ -36,15 +36,8 @@
           require_once('../php/connection.php');
           if(@$_GET['password1']==true)
           {
-            $query="Select email,color,password from logindb WHERE email='".$_SESSION['Email'];
-            $result =  mysqli_query($con,$query);
-            if(mysqli_num_rows($result)==1)
-            {
-                  $data = $result1->fetch_row();
-                  echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">'.$data[2];
-                  echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+            echo '<div class="alert alert-success container-sm" role="alert">Your Password is "'.$_SESSION['pass'].'". Please Remember it now! <a href="loginpage.php">Login Here</a></div>';
             }
-      }
       ?>
 
       <form method="POST" action="../php/forgot.php">

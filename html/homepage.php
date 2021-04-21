@@ -33,7 +33,7 @@ session_start();
     </nav>
 
     <?php
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+       /* <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <strong class="me-auto">EmptyFields</strong>
                 <small>Error Messgae</small>
@@ -42,7 +42,7 @@ session_start();
                 <div class="toast-body">
                 Hello, world! This is a toast message.
             </div>
-        </div>
+        </div>*/
     ?>
 
 
