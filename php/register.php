@@ -29,7 +29,7 @@ if(isset($_POST['registerbtn']))
             $result4=mysqli_query($con,$compare);
             if (mysqli_num_rows($result2) < mysqli_num_rows($result4))
             {
-                header("connection:../html/loginpage.php")    
+                header("location:../html/loginpage.php");
             }
                 else{
                 echo "Error: ". $sql ." ". $conn->error;

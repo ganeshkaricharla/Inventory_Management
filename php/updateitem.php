@@ -6,7 +6,7 @@ if(isset($_POST['updateitembtn']))
     
     if(strlen($_POST['itemprice'])==0 && strlen($_POST['itemquantity'])==0)
     {
-        header("location:../html/homepage.php?strlen= Please Fill all the fields.");
+        header("location:../html/homepage.php?Empty= Please Fill all the fields.");
     }
     else if(strlen($_POST['itemprice'])==0 && strlen($_POST['itemquantity'])>0)
     {
