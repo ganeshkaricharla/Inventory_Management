@@ -189,7 +189,7 @@ session_start();
                             <input type="text" class="form-control" placeholder="Email" name="email" value ="<?php echo $_SESSION['Email'];?>" disabled>
                         </div>
                         <div class="col">
-                            <select class="form-select col" aria-label="Default select example">
+                            <select class="form-select col" aria-label="Default select example" name ="itemname">
                                 <?php
                                     require_once('../php/connection.php');
                                     $query="select itemname from inventorydb where email = '".$_SESSION['Email']."'";
@@ -214,7 +214,7 @@ session_start();
                         </div>
                     </div>
                     
-                    <button type="submit" class="btn btn-warning col-5 offset-4 center">Add Item</button>
+                    <button type="submit" class="btn btn-warning col-5 offset-4 center" name ="updateitembtn">Update Item</button>
                 </form>
             <?php
                 }      
@@ -238,8 +238,8 @@ session_start();
                 <tr>
                 <th scope="col">#</th>
                 <th scope="col">ItemName</th>
-                <th scope="col">Item Quantity</th>
                 <th scope="col">Item Price</th>
+                <th scope="col">Item Quantity</th>
                 </tr>
             </thead>
             <tbody>

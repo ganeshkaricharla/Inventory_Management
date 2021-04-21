@@ -10,7 +10,7 @@ if(isset($_POST['additembtn']))
     }
     else
     {
-        $query="select * from inventorydb where itemname='".$_POST['itemname']."'";
+        $query="select * from inventorydb where itemname='".$_POST['itemname']."' and email='".$_SESSION['Email']."'";
         $result =  mysqli_query($con,$query);
         if(mysqli_num_rows($result)!= 0)
         {
