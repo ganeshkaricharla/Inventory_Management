@@ -88,7 +88,7 @@ session_start();
                 {
                     ?>
                         <div class="alert alert-success text-center container-sm"  role="alert">
-                            <?php echo "Item Inserted Succesfully." ?>
+                            <?php echo "Operation Succesfully." ?>
                         </div>
                 <?php
                         }      
@@ -98,7 +98,7 @@ session_start();
                 {
                     ?>
                         <div class="alert alert-warning text-center container-sm"  role="alert">
-                            <?php echo "Item Not Inserted,Try after Sometime." ?>
+                            <?php echo "Operation Failed! Try after Sometime." ?>
                         </div>
                 <?php
                         }      
