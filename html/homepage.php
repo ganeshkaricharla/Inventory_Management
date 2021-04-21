@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +18,33 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <?php 
-                    session_start();
-                    echo $_SESSION['User']."'s Inventory Management"
+                   if(isset($_SESSION['User']))
+                   {
+                        echo $_SESSION['User']."'s Inventory Management";
+                   }
+                   else
+                   {
+                       header("location:loginpage.php");
+                   }
                 ?>
             </a>
-            <a class="btn btn-warning" href="#" role="button">Logout</a>
+            <a class="btn btn-warning" href="../php/logout.php" role="button">Logout</a>
         </div>
     </nav>
+
+    <?php
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">EmptyFields</strong>
+                <small>Error Messgae</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    ?>
+
 
 
     <div class="container-fluid">
@@ -41,25 +64,28 @@
             
             <!--Function's Butt Response-->
             <div class="col-8 border bg-dark">
+
+            <!-- if add button pressed --> 
             <?php
                 if(@$_GET['Add']==true)
                 {
             ?>
-                <form>
-                    <div class="row m-4">
+                <!-- add form-->
+                <form method="post" action = "../php/additem.php">
+                    <div class="row m-4 mt-5">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" placeholder="Email" name="email" value ="<?php echo $_SESSION['Email'];?>" disabled>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Item Name">
+                            <input type="text" class="form-control" placeholder="Item Name" name="itemname">
                         </div>
                     </div>
                     <div class="row m-4">
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Item Price">
+                            <input type="number" class="form-control" placeholder="Item Price" name="itemprice">
                         </div>
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Item Quantity">
+                            <input type="number" class="form-control" placeholder="Item Quantity" name="itemquantity">
                         </div>
                     </div>
                     
@@ -68,6 +94,97 @@
             <?php
                 }      
             ?>
+
+            <!-- if Delete button pressed --> 
+            <?php
+                if(@$_GET['Delete']==true)
+                {
+            ?>
+                <!-- delete form-->
+                <form method="post" action = "../php/deleteitem.php">
+                    <div class="row m-4 mt-5">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Email" name="email" value ="<?php echo $_SESSION['Email'];?>" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row m-4">
+                        <div class="col">
+                            <select class="form-select col" aria-label="Default select example">
+                                <?php
+                                    require_once('../php/connection.php');
+                                    $query="select itemname from inventorydb where email = '".$_SESSION['Email']."'";
+                                    $result =  mysqli_query($con,$query);
+                                    if(mysqli_num_rows($result)>0)
+                                    {
+                                        while ($row =mysqli_fetch_row($result))
+                                        {
+                                           echo "<option value=".$row[0].">".$row[0]."</option>";
+                                        }
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row m-4">
+                        <div class="col">
+                            <button type="submit" class="btn btn-warning col center">Delete Item</button>
+                        </div>
+                    </div>
+                    
+                </form>
+            <?php
+                }      
+            ?> 
+
+
+            <!-- if Update button pressed --> 
+            <?php
+                if(@$_GET['Update']==true)
+                {
+            ?>
+                <!-- Update form-->
+                <form method="post" action = "../php/updateitem.php">
+                    <div class="row m-4 mt-5">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Email" name="email" value ="<?php echo $_SESSION['Email'];?>" disabled>
+                        </div>
+                        <div class="col">
+                            <select class="form-select col" aria-label="Default select example">
+                                <?php
+                                    require_once('../php/connection.php');
+                                    $query="select itemname from inventorydb where email = '".$_SESSION['Email']."'";
+                                    $result =  mysqli_query($con,$query);
+                                    if(mysqli_num_rows($result)>0)
+                                    {
+                                        while ($row =mysqli_fetch_row($result))
+                                        {
+                                           echo "<option value=".$row[0].">".$row[0]."</option>";
+                                        }
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-4">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Item Price" name="itemprice">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Item Quantity" name="itemquantity">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-warning col-5 offset-4 center">Add Item</button>
+                </form>
+            <?php
+                }      
+            ?>
+
+            
+
+
             </div>
 
 
