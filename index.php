@@ -42,7 +42,7 @@
     <div class="pt-5 bg-secondary text-light ht"> 
       <div>
         <h4 class="fw-bold text-center">What is an inventory management system?</h4><br>
-        <div class="mx-5">
+        <div class="mx-5 lh-2">
             An inventory management system (or inventory system) is the process by which you track your goods throughout your entire supply chain, from purchasing to production to end sales. It governs how you approach inventory management for your business.<br>
         </div>
       </div>
@@ -89,7 +89,7 @@
           <img src="assets/images/harsha.jpg" class="card-img-top" alt="..." width="200">
           <div class="card-body">
             <h5 class="card-title">Potula HarshaVardhan</h5>
-            <p class="card-text">Developer | Analyst | Learner</p>
+            <p class="card-text">Developer | Analyst | Learner<br><br><br></p>
             <a href="https://www.linkedin.com/in/harshavardhanpotula/" class="btn btn-primary">Linkedin</a>
             <a href="https://github.com/harshapotula" class="btn btn-primary">Github</a>
           </div>
