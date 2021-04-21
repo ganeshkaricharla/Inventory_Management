@@ -14,6 +14,17 @@
       {
         height: 100%;
       }
+      .zoomcard {
+        padding: 50px;
+        transition: transform 2s;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
+
+      .zoomcard:hover {
+        transform: scale(1.15);
+      }
     </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -60,7 +71,7 @@
       <h1 class="text-center mt-5">Project Contributors</h1>
   
     <div class="row m-5 px-2 offset-2">
-      <div class ="col">
+      <div class ="col  zoomcard">
         <div class="card mt-5 ml-3" style="width: 18rem;">
           <img src="assets/images/vighnesh.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -72,7 +83,7 @@
         </div>
       </div>
 
-      <div class ="col">
+      <div class ="col  zoomcard">
         <div class="card mt-5 ml-3" style="width: 18rem;">
           <img src="assets/images/ganesh.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -84,7 +95,7 @@
         </div>
       </div>
 
-      <div class ="col">
+      <div class ="col zoomcard">
         <div class="card mt-5 ml-3" style="width: 18rem;">
           <img src="assets/images/harsha.jpg" class="card-img-top" alt="..." width="200">
           <div class="card-body">
