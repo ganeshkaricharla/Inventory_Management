@@ -16,14 +16,14 @@
       }
       .zoomcard {
         padding: 50px;
-        transition: transform 2s;
+        transition: transform 5s;
         width: 200px;
         height: 200px;
         margin: 0 auto;
       }
 
       .zoomcard:hover {
-        transform: scale(1.15);
+        transform: rotate(360deg);
       }
     </style>
     <!-- Bootstrap CSS -->
