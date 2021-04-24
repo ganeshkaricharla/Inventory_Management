@@ -23,7 +23,7 @@
       }
 
       .zoomcard:hover {
-        transform: scale(1.15);
+        transform: scale(1.25);
       }
     </style>
     <!-- Bootstrap CSS -->
