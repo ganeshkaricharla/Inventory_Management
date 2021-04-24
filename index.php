@@ -16,7 +16,7 @@
       }
       .zoomcard {
         padding: 50px;
-        transition: transform 5s;
+        transition: transform 2s;
         width: 200px;
         height: 200px;
         margin: 0 auto;
